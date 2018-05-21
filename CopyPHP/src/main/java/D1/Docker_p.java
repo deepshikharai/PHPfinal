@@ -28,6 +28,7 @@ public class Docker_p {
 	static WebDriver driver;
 	static String parent;
 	static String child;
+	
 	//static WebDriverWait wait = new WebDriverWait(driver,1000);
 	
 	//String url="http://sparshv2/Pages/Home.aspx";
@@ -37,18 +38,21 @@ public class Docker_p {
 	@BeforeClass
 	public static void setUp() throws Exception {
 		
-		/*DesiredCapabilities dcp = new DesiredCapabilities();
+		DesiredCapabilities dcp = new DesiredCapabilities();
 		dcp.setCapability(CapabilityType.BROWSER_NAME, BrowserType.CHROME);
 		dcp.setCapability(CapabilityType.PLATFORM, Platform.LINUX);
 		dcp.setCapability(CapabilityType.SUPPORTS_APPLICATION_CACHE, true);
 		dcp.setCapability(CapabilityType.SUPPORTS_NETWORK_CONNECTION, true);
+		
 		dcp.setCapability("name", "PHP");
+		
 		dcp.setCapability("idleTimeout", 150);
-		driver = new RemoteWebDriver(new URL("http://35.193.7.170:4444/wd/hub"),dcp);*/
+		
+		driver = new RemoteWebDriver(new URL("http://35.231.124.91:4444/wd/hub"),dcp);
 	
-		System.setProperty("webdriver.chrome.driver","D:\\drivers\\chromedriver_win32\\chromedriver.exe");
+		/*System.setProperty("webdriver.chrome.driver","D:\\drivers\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver(); 
-		driver.manage().window().maximize();
+		driver.manage().window().maximize();*/
 		
 		/*System.setProperty("webdriver.ie.driver","D:\\drivers\\IEDriverServer_Win32_3.0.0\\IEDriverServer.exe");
 		driver = new InternetExplorerDriver(); 
@@ -119,7 +123,7 @@ public class Docker_p {
 		        System.out.println("download");
 	
 	}
-	@Test
+	/*@Test
 	public void test2() throws Exception {
 		WebDriverWait wait = new WebDriverWait(driver,1000);
 	//System.out.println("title"+driver.getTitle());
@@ -161,10 +165,10 @@ public class Docker_p {
 			System.out.println("valid username");
 		}else{
 			System.out.println("invalid user");
-		}
+		}*/
 			
 	
-	}
+	
 	
 	@After
 	public void tearDown() throws Exception {
